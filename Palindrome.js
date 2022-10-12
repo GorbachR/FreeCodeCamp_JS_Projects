@@ -1,11 +1,11 @@
 function palindrome(str) {
-  str = str.replace(/[\W_]/g, "").toLowerCase()
+  str = str.replace(/[\W_]/g, "").toLowerCase();
 
   const iterator = str[Symbol.iterator]();
   let char = iterator.next();
   let comparisonStr = "";
 
-  while(!iterator.done && char.value) {
+  while (char.value) {
     comparisonStr = char.value.concat(comparisonStr);
     char = iterator.next();
   }
